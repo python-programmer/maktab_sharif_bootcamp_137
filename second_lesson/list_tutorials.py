@@ -1,6 +1,6 @@
 numbers: list = [1, 2, 8, 3, 4, 8]
 
-print(numbers)
+print(numbers[185])
 
 numbers[1] = 198
 

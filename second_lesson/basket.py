@@ -5,11 +5,10 @@ basket: list = []
 print("This is our products")
 print(products)
 
-while True:
-    command: str = input("Please choose command: (add, remove, exit, clear)")
-    if command == "exit":
-        break
-    elif command == "add":
+command: str = input("Please choose command: (add, remove, exit, clear)")
+
+while command != "exit":
+    if command == "add":
         item_name: str = input("please enter your item name:")
 
         if item_name in products:
@@ -22,5 +21,11 @@ while True:
         print("\nYour basket")
         for (index, item) in enumerate(basket, start=1):
             print(f"{index} {item}")
+    elif command == "remove":
+        print("remove an item")
+    elif command == "clear":
+        basket.clear()
+        print("clear basket")
+    command: str = input("Please choose command: (add, remove, exit, clear)")
 
 
