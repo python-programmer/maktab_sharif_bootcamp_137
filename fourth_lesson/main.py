@@ -386,3 +386,16 @@ try:
         print(file.read())
 except FileNotFoundError:
     print("file not found")
+
+
+# divide_by = requests()
+
+# try:
+#     result = 10 / divide_by
+# except ZeroDivisionError:
+#     print("zero division")
+
+# age ino goft, manam no
+
+# if he_said == "don't":
+#     print("no")
