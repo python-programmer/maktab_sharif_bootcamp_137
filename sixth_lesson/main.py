@@ -85,20 +85,20 @@ from functools import reduce
 
 # 6! = 6 * 5 * 4 * 3 * 2 * 1
 
-number: int = 6
+# number: int = 6
 
-number_placeholder = number
+# number_placeholder = number
 
-multiply = 1
+# multiply = 1
 
-while number > 0:
-    multiply *= number
-    number -= 1
+# while number > 0:
+#     multiply *= number
+#     number -= 1
 
-print(f"{number_placeholder}! = {multiply}")
+# print(f"{number_placeholder}! = {multiply}")
 
-number_fact_list = range(1, number_placeholder + 1)
+# number_fact_list = range(1, number_placeholder + 1) 
 
-factorial_result = reduce(lambda first_number, second_number: first_number * second_number, number_fact_list, 1)
+# factorial_result = reduce(lambda first_number, second_number: first_number * second_number, number_fact_list, 1)
 
-print(f"{number_placeholder}! = {multiply}")
+# print(f"{number_placeholder}! = {multiply}")
