@@ -6,6 +6,8 @@
 
 stack = []
 
+from new_feature.abcd import show as show_abcd
+
 def push(item):
     stack.append(item)
 
@@ -15,4 +17,5 @@ def pop(index = -1):
 
 
 def show():
+    show_abcd()
     print(stack)

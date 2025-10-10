@@ -1,5 +1,8 @@
 import stack
 import list_type
+import functions
+import calculator
+import utils
 
 first_number = 10
 
@@ -298,26 +301,199 @@ numbers = [1, 2, 3, 4, 5, 6]
 
 # radar 12421
 
-input_str = input("Enter A Word:")
+# input_str = input("Enter A Word:")
 
-index = 0
-counter = -1
+# index = 0
+# counter = -1
 
-is_palindrome = True
+# is_palindrome = True
 
-while index < len(input_str) / 2:
-    if input_str[index] != input_str[counter]:
-        is_palindrome = False
-        break
+# while index < len(input_str) / 2:
+#     if input_str[index] != input_str[counter]:
+#         is_palindrome = False
+#         break
 
-    index += 1
-    counter -= 1
+#     index += 1
+#     counter -= 1
 
-print(f"{input_str} is Palindrome {is_palindrome}")
+# print(f"{input_str} is Palindrome {is_palindrome}")
 
 
-reversed_input = ''.join(list(reversed(input_str)))
+# reversed_input = ''.join(list(reversed(input_str)))
 
-print(reversed_input == input_str)
+# print(reversed_input == input_str)
 
-print(input_str[::-1] == input_str)
+# print(input_str[::-1] == input_str)
+
+# functions.great("Mahdi", "Hello")
+# functions.great(message="Continue", name="Ali")
+# functions.great(name="Ali", message="Hello")
+
+# numbers = [1, -1, 5, -5]
+
+# print(functions.get_sum_of_values(numbers))
+
+# numbers = [1, -1, 5, -5, 8]
+
+# print(functions.get_sum_of_values(numbers))
+
+# numbers = 88
+
+# print(functions.get_sum_of_values(numbers))
+
+
+# stack.push(10)
+# stack.push(11)
+
+# stack.show()
+
+# کد در مرحله باید کار کند
+# کد باید بهینه باشد
+# کد باید قابل نگهداری باشد
+
+# command = ''
+
+# while command != 'n':
+#     first_number = input("First Number:")
+#     second_number = input("Second Number:")
+
+#     try:
+#         first_number = int(first_number)
+#         second_number = int(second_number)
+#     except ValueError:
+#         print(f"Please enter a valid number")
+#         continue
+
+
+#     operator = input("Please enter your command (+, -, *, /):")
+
+#     result = None
+
+#     # FIXME: this is not good
+#     if operator == '+':
+#         result = calculator.add(first_number, second_number)
+#     elif operator == '-':
+#         result = calculator.subtract(first_number, second_number)
+#     elif operator == '*':
+#         result = calculator.mutiply(first_number, second_number)
+#     elif operator == '/':
+#         try:
+#             result = calculator.divide(first_number, second_number)
+#         except ZeroDivisionError:
+#             print(f"{second_number} is not a valid value for division")
+#             continue
+#     else:
+#         print(f"{operator} isn't a valid operator")
+
+#     print(f"{first_number} {operator} {second_number} = {result}")
+
+#     command = input("Do you want to continue?(y/n)")
+
+
+# name = r"hadi \t farhadi"
+# first_name = "hadi \t farhadi"
+
+# print(name)
+# print(first_name)
+
+# try:
+#     with open('users.txt', 'r') as file:
+#         print(file.readline())
+# except FileNotFoundError:
+#     print("file not found")
+
+# item_tuple = (11, 12)
+# item_tuple[0] = 12
+
+numbers = ((1, 2, "hadi"), (3, 4, "mehdi"), (5, 6, "reza"))
+persons = [{"first_name": "hadi", "age": 38}, {"first_name": "mahdi", "age": 28}, {"first_name": "yasin", "age": 16}]
+
+
+# print(utils.sort_by(persons, lambda item: item["first_name"], True))
+# print(utils.sort_by(numbers, lambda item: item[0], True))
+
+
+# number_list = []
+
+# # for number in numbers:
+# #     number_list.append({number[0]: number[1]})
+
+# # number_list = [{key: value} for key, value in numbers]
+
+# # print(number_list)
+
+# # item = [5, 6]
+
+# # item_0, item_1 = item
+
+# # person_tuple = tuple((item["first_name"], item["age"]) for item in persons)
+
+# # print(person_tuple)
+
+# # number_set = {(1, 2), (3, 4), (1, 3), (1, 2)}
+# # print(number_set)
+
+# # number_list = list(number_set)
+# # print(number_list[1])
+
+
+# def check_mutability(number_list:list, item:int):
+#     item += 10
+#     number_list.append(12)
+
+#     return item
+
+
+# number_list = [1, 2, 3, 4]
+# number = 13
+
+# print(number_list)
+# print(number)
+
+# check_mutability(number_list, number)
+
+# print(number_list)
+# print(number)
+
+
+# def decorate(func):
+#     def wrapper(*args, **kwargs):
+#         result = func(*args, **kwargs) + 13
+#         return result
+#     return wrapper
+
+# @decorate
+# def add(first_number, second_number):
+#     return first_number + second_number
+
+# print(add(10, 12))
+
+# def outer_dec(name, age):
+#     def outer_cal (func):
+#      def inner_cal(*args, **kwargs):
+#         print(name)
+#         print(age)
+#         result = func(args[0]*10)
+#         return result * 10
+#      return inner_cal
+#     return outer_cal
+
+# @outer_dec('sam', 29)
+# # @outer_add
+# def calucate2 (number):
+#     return number + 30
+
+# print(calucate2(1))
+
+def factorial(number):
+    if number < 1:
+        print("please enter a valid value for number")
+        return
+    
+    if number == 1:
+        return 1
+
+    return number * factorial(number - 1)
+
+
+print(factorial(6))
